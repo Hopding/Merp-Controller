@@ -19,3 +19,23 @@ After entering MERP's IP and connecting via WiFi, the Desktop Controller can sen
 
 ### Desktop Controller On Failed Connection
 ![MERP Desktop Controller Failed Connection](http://hopding.com/img/merp-controller-screenshot-4.PNG)
+
+# Building the Project
+The code for the Desktop Controller is structured as a Gradle project, with a task for building a runnable JAR file. To build and run the JAR (for both Windows Powershell and Linux):
+
+* **Clone** this repo: 
+```
+$ git clone https://github.com/Hopding/Merp-Controller.git
+```
+* **CD** into the project directory: 
+```
+$ cd Merp-Controller
+```
+* **Execute** the Gradle task to create the JAR (The JAR will be created in the `build/libs` directory): 
+```
+$ ./gradlew runnableJAR
+```
+* **Execute** the JAR with the following command:
+```
+$ java -jar "build/libs/MERP Controller-1.0.jar"
+```
