@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hopding.merp.desktop.Controller">
+  <left>
+    <Pane prefHeight="333.0" prefWidth="333.0">
+      <children>
+        <ImageView fx:id="upBtn" fitHeight="111.0" fitWidth="111.0" layoutX="113.0" layoutY="0.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/up.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="rightBtn" fitHeight="111.0" fitWidth="111.0" layoutX="219.0" layoutY="111.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/right.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="leftBtn" fitHeight="111.0" fitWidth="111.0" layoutX="0.0" layoutY="111.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/left.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="downBtn" fitHeight="111.0" fitWidth="111.0" layoutX="113.0" layoutY="219.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/down.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="upRightBtn" fitHeight="111.0" fitWidth="111.0" layoutX="225.0" layoutY="0.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/up-right.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="downRightBtn" fitHeight="111.0" fitWidth="111.0" layoutX="219.0" layoutY="219.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/down-right.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="downLeftBtn" fitHeight="111.0" fitWidth="111.0" layoutX="0.0" layoutY="219.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/down-left.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="upLeftBtn" fitHeight="111.0" fitWidth="111.0" layoutX="0.0" layoutY="0.0" onMouseReleased="#onButtonReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@img/arrows/released/up-left.png" />
+          </image>
+        </ImageView>
+      </children>
+    </Pane>
+  </left>
+  <right>
+    <VBox prefHeight="310.0" prefWidth="135.0" spacing="5.0">
+      <children>
+        <TextField fx:id="ipAddrField" prefWidth="200.0" promptText="RPi IP Address" text="192.168.1.241" />
+        <Button fx:id="connectBtn" defaultButton="true" mnemonicParsing="false" prefWidth="135.0" text="Connect" />
+        <Button fx:id="disconnectBtn" mnemonicParsing="false" prefWidth="135.0" text="Disconnect" />
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="106.0" text="Speed:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="speedBox" alignment="CENTER" onAction="#onSpeedEntered" prefHeight="25.0" prefWidth="77.0" text="45" />
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </HBox>
+        <Slider fx:id="speedSlider" max="90.0" onMouseReleased="#onSliderSpeedChanged" orientation="VERTICAL" prefHeight="359.0" prefWidth="135.0" value="45.0" />
+      </children>
+    </VBox>
+  </right>
+</BorderPane>
