@@ -23,6 +23,8 @@ After entering MERP's IP and connecting via WiFi, the Desktop Controller can sen
 # Building the Project
 The code for the Desktop Controller is structured as a Gradle project, with a task for building a runnable JAR file. To build and run the JAR (for both Windows Powershell and Linux):
 
+**NOTE:** [Releases](https://github.com/Hopding/Merp-Controller/releases) are available with pre-built JARs, if you would prefer to skip the cloning and building steps, and get straight to running the code.
+
 * **Clone** this repo: 
 ```
 $ git clone https://github.com/Hopding/Merp-Controller.git
